@@ -6,6 +6,19 @@
   },
   "item": [
     {
+      "name": "View All Students",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "https://erp-fee-backend.onrender.com/api/students",
+          "host": ["erp-fee-backend.onrender.com"],
+          "protocol": "https",
+          "path": ["api", "students"]
+        }
+      },
+      "response": []
+    },
+    {
       "name": "Update Fee Details",
       "request": {
         "method": "POST",

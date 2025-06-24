@@ -6,6 +6,7 @@ A Node.js backend for managing student fee details, sending confirmation emails,
 - Update student fee details
 - Send confirmation emails to students
 - Confirm fee submission via email links
+- View list of students (admin)
 - RESTful API endpoints
 
 ## Getting Started
@@ -44,7 +45,26 @@ A Node.js backend for managing student fee details, sending confirmation emails,
 
 ## API Endpoints
 
-### 1. Update Fee Details
+### 1. View All Students
+- **URL:** `https://erp-fee-backend.onrender.com/api/students`
+- **Method:** `GET`
+- **Response:**
+  ```json
+  [
+    {
+      "_id": "<student_id>",
+      "name": "Student Name",
+      "email": "student@example.com",
+      "totalFee": 10000,
+      "dueAmount": 2000,
+      "dueDate": "2025-07-01T00:00:00.000Z",
+      "feeStatus": "Pending"
+    },
+    ...
+  ]
+  ```
+
+### 2. Update Fee Details
 - **URL:** `https://erp-fee-backend.onrender.com/api/update-fee`
 - **Method:** `POST`
 - **Body:**
@@ -61,7 +81,7 @@ A Node.js backend for managing student fee details, sending confirmation emails,
   { "message": "Fee updated & email sent" }
   ```
 
-### 2. Confirm Fee Submission
+### 3. Confirm Fee Submission
 - **URL:** `https://erp-fee-backend.onrender.com/api/confirm`
 - **Method:** `GET`
 - **Query Params:**

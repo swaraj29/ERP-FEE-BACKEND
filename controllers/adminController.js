@@ -31,3 +31,12 @@ Please confirm whether you have submitted the fees:
     res.status(500).json({ error: error.message });
   }
 };
+
+export const getAllStudents = async (req, res) => {
+  try {
+    const students = await Student.find();
+    res.status(200).json(students);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};

@@ -1,6 +1,12 @@
 # API Endpoints
 
-## 1. Update Fee Details
+## 1. View All Students
+- **Endpoint:** `GET https://erp-fee-backend.onrender.com/api/students`
+- **Description:** Retrieve a list of all students.
+- **Response:**
+  - Array of student objects
+
+## 2. Update Fee Details
 - **Endpoint:** `POST https://erp-fee-backend.onrender.com/api/update-fee`
 - **Description:** Update a student's fee details and send a confirmation email.
 - **Request Body:**
@@ -11,7 +17,7 @@
 - **Response:**
   - `{ "message": "Fee updated & email sent" }`
 
-## 2. Confirm Fee Submission
+## 3. Confirm Fee Submission
 - **Endpoint:** `GET https://erp-fee-backend.onrender.com/api/confirm`
 - **Description:** Confirm fee submission via email link.
 - **Query Parameters:**
