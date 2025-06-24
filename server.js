@@ -1,18 +1,9 @@
 import express from 'express';
 import connectDB from './config/db.js';
 import dotenv from 'dotenv';
+import app from './app.js';
 
 dotenv.config();
-
-const app = express();
-
-// Middleware (optional)
-// app.use(express.json());
-
-// ✅ Root route - basic health check or live indicator
-app.get('/', (req, res) => {
-  res.send('ERP Fee Backend is live!');
-});
 
 const PORT = process.env.PORT || 3000;
 
