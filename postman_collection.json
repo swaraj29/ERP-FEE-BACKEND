@@ -17,8 +17,9 @@
           "raw": "{\n  \"studentId\": \"<student_id>\",\n  \"totalFee\": 10000,\n  \"dueAmount\": 2000,\n  \"dueDate\": \"2025-07-01\"\n}"
         },
         "url": {
-          "raw": "{{base_url}}/api/update-fee",
-          "host": ["{{base_url}}"],
+          "raw": "https://erp-fee-backend.onrender.com/api/update-fee",
+          "host": ["erp-fee-backend.onrender.com"],
+          "protocol": "https",
           "path": ["api", "update-fee"]
         }
       },
@@ -29,8 +30,9 @@
       "request": {
         "method": "GET",
         "url": {
-          "raw": "{{base_url}}/api/confirm?student_id=<student_id>&response=yes",
-          "host": ["{{base_url}}"],
+          "raw": "https://erp-fee-backend.onrender.com/api/confirm?student_id=<student_id>&response=yes",
+          "host": ["erp-fee-backend.onrender.com"],
+          "protocol": "https",
           "path": ["api", "confirm"],
           "query": [
             { "key": "student_id", "value": "<student_id>" },
@@ -45,8 +47,9 @@
       "request": {
         "method": "GET",
         "url": {
-          "raw": "{{base_url}}/api/confirm?student_id=<student_id>&response=no",
-          "host": ["{{base_url}}"],
+          "raw": "https://erp-fee-backend.onrender.com/api/confirm?student_id=<student_id>&response=no",
+          "host": ["erp-fee-backend.onrender.com"],
+          "protocol": "https",
           "path": ["api", "confirm"],
           "query": [
             { "key": "student_id", "value": "<student_id>" },
@@ -56,8 +59,5 @@
       },
       "response": []
     }
-  ],
-  "variable": [
-    { "key": "base_url", "value": "http://localhost:3000" }
   ]
 }

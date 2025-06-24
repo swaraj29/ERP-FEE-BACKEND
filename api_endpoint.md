@@ -1,7 +1,7 @@
 # API Endpoints
 
 ## 1. Update Fee Details
-- **Endpoint:** `POST /api/update-fee`
+- **Endpoint:** `POST https://erp-fee-backend.onrender.com/api/update-fee`
 - **Description:** Update a student's fee details and send a confirmation email.
 - **Request Body:**
   - `studentId` (string): Student's MongoDB ID
@@ -12,7 +12,7 @@
   - `{ "message": "Fee updated & email sent" }`
 
 ## 2. Confirm Fee Submission
-- **Endpoint:** `GET /api/confirm`
+- **Endpoint:** `GET https://erp-fee-backend.onrender.com/api/confirm`
 - **Description:** Confirm fee submission via email link.
 - **Query Parameters:**
   - `student_id` (string): Student's MongoDB ID

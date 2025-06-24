@@ -30,7 +30,8 @@ A Node.js backend for managing student fee details, sending confirmation emails,
    MONGO_URI=your_mongodb_uri
    EMAIL=your_email@gmail.com
    PASSWORD=your_email_app_password
-   BASE_URL=http://localhost:3000
+   BASE_URL=https://erp-fee-backend.onrender.com
+   # BASE_URL=http://localhost:3000
    ```
 4. Seed the database (optional):
    ```bash
@@ -44,7 +45,7 @@ A Node.js backend for managing student fee details, sending confirmation emails,
 ## API Endpoints
 
 ### 1. Update Fee Details
-- **URL:** `/api/update-fee`
+- **URL:** `https://erp-fee-backend.onrender.com/api/update-fee`
 - **Method:** `POST`
 - **Body:**
   ```json
@@ -61,13 +62,13 @@ A Node.js backend for managing student fee details, sending confirmation emails,
   ```
 
 ### 2. Confirm Fee Submission
-- **URL:** `/api/confirm`
+- **URL:** `https://erp-fee-backend.onrender.com/api/confirm`
 - **Method:** `GET`
 - **Query Params:**
   - `student_id`: Student's ID
   - `response`: `yes` or `no`
 - **Example:**
-  `/api/confirm?student_id=123&response=yes`
+  `https://erp-fee-backend.onrender.com/api/confirm?student_id=123&response=yes`
 - **Response:**
   - HTML message with updated status
 
